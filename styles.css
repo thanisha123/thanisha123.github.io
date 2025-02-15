@@ -1,0 +1,266 @@
+:root {
+    --primary: #2C7BE5;
+    --secondary: #21D4FD;
+    --accent: #FF6B6B;
+    --dark: #2D3748;
+    --light: #F8F9FA;
+    --gray: #E2E8F0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.brand-header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    background: white;
+    border-radius: 12px;
+    padding: 8px;
+    display: inline-flex;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.info-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    font-size: 14px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: var(--dark);
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.frame-size-guide {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--light);
+    border-radius: 8px;
+    display: none;
+}
+
+.frame-size-guide table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+.frame-size-guide th,
+.frame-size-guide td {
+    padding: 0.5rem;
+    border: 1px solid var(--gray);
+    text-align: center;
+}
+
+.frame-size-guide th {
+    background: var(--primary);
+    color: white;
+}
+
+.measurement-input {
+    display: none;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background: white;
+    margin-bottom: 2rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.feature-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.feature-text {
+    color: #666;
+    line-height: 1.5;
+}
+
+.calculators-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+.calculator {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.calculator h2 {
+    color: var(--primary);
+    margin-top: 0;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--gray);
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--gray);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.height-input {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    background: var(--primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2;
+}
+
+button:hover {
+    background: #2468c5;
+}
+
+.result {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-left: 4px solid var(--primary);
+    background-color: var(--light);
+    border-radius: 0 8px 8px 0;
+}
+
+.result p {
+    margin: 0.5rem 0;
+}
+
+.result ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    color: var(--dark);
+    border-top: 1px solid var(--gray);
+}
+
+.inches-group {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .features {
+        padding: 1rem;
+    }
+    
+    .feature-card {
+        width: 100%;
+    }
+    
+    .calculators-container {
+        padding: 0 1rem 2rem;
+    }
+}

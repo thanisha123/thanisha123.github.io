@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitalCalc - Health & Fitness Calculators</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="brand-header">
+        <div class="logo">
+            <div class="logo-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"></path>
+                </svg>
+            </div>
+            <span>VitalCalc</span>
+        </div>
+        <div class="tagline">Your Personal Health Metrics Calculator</div>
+    </div>
+    
+    <div class="features">
+        <div class="feature-card">
+            <div class="feature-icon">❤️</div>
+            <div class="feature-title">Heart Rate Zones</div>
+            <div class="feature-text">Calculate your maximum heart rate and optimal training zones for better fitness results.</div>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">⚖️</div>
+            <div class="feature-title">Ideal Weight Range</div>
+            <div class="feature-text">Discover your ideal weight range based on height and gender.</div>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <div class="feature-title">Instant Results</div>
+            <div class="feature-text">Get immediate, accurate calculations with our easy-to-use health metrics tools.</div>
+        </div>
+    </div>
+
+    <div class="calculators-container">
+        <div class="calculator">
+            <h2>Maximum Heart Rate Calculator</h2>
+            <div class="input-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" min="1" max="120" placeholder="Enter your age">
+            </div>
+            <button onclick="calculateHeartRate()">Calculate Max Heart Rate</button>
+            <div id="heartRateResult" class="result"></div>
+        </div>
+
+        <div class="calculator">
+            <h2>Ideal Weight Calculator</h2>
+            <div class="input-group">
+                <label>Height:</label>
+                <select id="heightUnit" onchange="toggleHeightInput()">
+                    <option value="cm">Centimeters</option>
+                    <option value="inches">Feet/Inches</option>
+                </select>
+                
+                <div id="cmGroup">
+                    <input type="number" id="heightCm" min="100" max="250" placeholder="Enter height in cm">
+                </div>
+                
+                <div id="feetGroup" class="inches-group">
+                    <div class="height-input">
+                        <input type="number" id="heightFeet" min="3" max="8" placeholder="Feet">
+                        <input type="number" id="heightInches" min="0" max="11" placeholder="Inches">
+                    </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="gender">Gender:</label>
+                <select id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+
+            <button onclick="calculateIdealWeight()">Calculate Ideal Weight</button>
+            <div id="weightResult" class="result"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 VitalCalc - Health & Fitness Calculators</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
